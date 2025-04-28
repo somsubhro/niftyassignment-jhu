@@ -5,7 +5,7 @@ You will build a mini authorization engine inspired by AWS Cedar.
 
 Given a set of policies and access requests, your program must decide whether to ALLOW or DENY the action, correctly handle wildcard matching, evaluate logical conditions, and generate a clear explanation for each decision.
 
----
+
 
 ## Files
 - `models.py`: Defines the Policy and Request classes. **(provided)**
@@ -14,7 +14,7 @@ Given a set of policies and access requests, your program must decide whether to
 - `sample_requests.json`: Example requests. **(provided)**
 - `run_engine.py`: Script to run your evaluator. **(provided)**
 
----
+
 
 ## Requirements
 1. Match principal, action, and resource (support wildcards).
@@ -22,26 +22,26 @@ Given a set of policies and access requests, your program must decide whether to
 3. Apply deny-overrides: if any deny matches, the result must be DENY.
 4. Output human-readable explanations for each decision.
 
----
+
 
 ## Stretch Goals (Optional)
 - Support OR (`||`) in conditions.
 - Suggest minimal policy changes if a request is denied.
 - Build a REPL (read-eval-print loop) for dynamic policy testing.
 
----
+
 
 ## Run Instructions
 ```bash
 python run_engine.py
 ```
 
----
+
 
 ## Deliverables
 - Completed `evaluator.py`.
 - If stretch goals are completed, a short note describing your extension.
 
----
+
 
 ## All the best!
