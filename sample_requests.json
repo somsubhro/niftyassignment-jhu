@@ -1,0 +1,22 @@
+[
+  {
+    "principal": { "id": "User::123" },
+    "action": "read",
+    "resource": { "id": "Document::public_doc", "isPublic": true }
+  },
+  {
+    "principal": { "id": "User::999" },
+    "action": "read",
+    "resource": { "id": "Document::secret", "isPublic": false }
+  },
+  {
+    "principal": { "id": "User::admin", "role": "admin" },
+    "action": "delete",
+    "resource": { "id": "Document::important_doc", "owner": "User::123" }
+  },
+  {
+    "principal": { "id": "User::guest" },
+    "action": "delete",
+    "resource": { "id": "Document::public_doc", "owner": "User::admin" }
+  }
+]

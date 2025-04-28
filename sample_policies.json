@@ -1,0 +1,23 @@
+[
+  {
+    "effect": "allow",
+    "principal": "User::*",
+    "action": "read",
+    "resource": "Document::*",
+    "condition": "resource.isPublic == true"
+  },
+  {
+    "effect": "deny",
+    "principal": "User::999",
+    "action": "read",
+    "resource": "Document::secret",
+    "condition": null
+  },
+  {
+    "effect": "allow",
+    "principal": "User::admin",
+    "action": "delete",
+    "resource": "Document::*",
+    "condition": "principal.role == 'admin'"
+  }
+]
